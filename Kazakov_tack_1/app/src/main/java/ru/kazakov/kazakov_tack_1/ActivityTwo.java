@@ -29,6 +29,8 @@ public class ActivityTwo extends AppCompatActivity {
 
     LayoutInflater mInflater;
 
+    MyCounter counter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +41,8 @@ public class ActivityTwo extends AppCompatActivity {
         listView = (ListView)findViewById(R.id.listView);
 
         listView.setAdapter(new MyAdapter());
+
+        counter = new MyCounter(this);
     }
 
 
@@ -75,7 +79,7 @@ public class ActivityTwo extends AppCompatActivity {
                 holder = (ViewHolder) convertView.getTag();
             }
 
-            holder.textView.setText(MyCounter.convert(position));
+            holder.textView.setText(counter.convert(position));
             if (position % 2 == 0) {
                 convertView.setBackgroundColor(Color.GRAY);
             } else {

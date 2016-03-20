@@ -1,22 +1,40 @@
 package ru.kazakov.kazakov_tack_1.clearJava;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import android.content.Context;
+import android.view.ContextThemeWrapper;
+
+import ru.kazakov.kazakov_tack_1.R;
 
 /**
  * Created by user on 16.03.2016.
  */
 public class MyCounter {
+    private static List<String> oneNineM;
+    private static List<String> oneNineF;
+    private static List<String> tenNineteen;
+    private static List<String> twentyNinety;
+    private static List<String> hundreds;
+    private static List<String> thousandMF;
+    private static String million;
+    private static String zero;
 
-    private static List<String> oneNineM = Arrays.asList("один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять");
-    private static List<String> oneNineF = Arrays.asList("одна", "две", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять");     // одна, две..девять
-    private static List<String> tenNineteen = Arrays.asList("десять", "одиннадцать", "двенадцать", "тринадцать", "четырнадцать", "пятнадцать", "шестнадцать", "семнадцать", "восемнадцать", "девятнадцать"); // десять, одиннадцать..девятнадцать
-    private static List<String> twentyNinety = Arrays.asList("двадцать", "тридцать", "сорок", "пятьдесят", "шестьдесят", "семьдесят", "восемьдесят", "девяносто");  // двадцать..девяносто
-    private static List<String> hundreds = Arrays.asList("сто", "двести", "триста", "четыреста", "пятьсот", "шестьсот", "семьсот", "восемьсот", "девятьсот");      // сто..девятьсот
-    private static List<String> thousandMF = Arrays.asList("тысяч", "тысяча", "тысячи", "тысячи", "тысячи", "тысяч", "тысяч", "тысяч", "тысяч", "тысяч");    // тысяч, тысяча, тысячи, тысячи..тысяч
-    private static String million = "миллион";
+    public MyCounter(Context context) {
+        oneNineM = Arrays.asList(context.getResources().getStringArray(R.array.oneNineM));
+        oneNineF = Arrays.asList(context.getResources().getStringArray(R.array.oneNineF));
+        tenNineteen = Arrays.asList(context.getResources().getStringArray(R.array.tenNineteen));
+        twentyNinety = Arrays.asList(context.getResources().getStringArray(R.array.twentyNinety));
+        hundreds = Arrays.asList(context.getResources().getStringArray(R.array.hundreds));
+        thousandMF = Arrays.asList(context.getResources().getStringArray(R.array.thousandMF));
+        million = context.getResources().getString(R.string.million);
+        zero = context.getResources().getString(R.string.zero);
+    }
 
-    public static String convert(int n) {
+    public String convert(int n) {
+
         int c, c1;
         StringBuilder result = new StringBuilder();
         String res = new String();
@@ -65,7 +83,7 @@ public class MyCounter {
         if (result.toString().isEmpty()) {
             return "ноль";
         } else if (n == 1) {
-            return "один миллион";
+            return million;
         } else {
             return result.toString().replaceAll("  ", " ");
         }
