@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Task2</string>
+
+    <!-- for activity_start -->
+    <string name="hello">Hello!</string>
+
+    <!-- for ad_item -->
+    <string name="image_description">technology</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
