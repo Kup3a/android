@@ -1,6 +1,7 @@
 package ru.kazakov.task2.dummy;
 
 import android.app.Activity;
+import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -46,7 +47,17 @@ public class DummyContent {
             JSONArray jsonArray = jsonObject.names();
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject temp = jsonObject.getJSONObject((String) jsonArray.get(i));
-                addItem(createDummyItem(i, (String) temp.get("title"), (String) temp.get("info"), (String) temp.get("picture")));
+                String[] itemInfo = new String[3];
+                String[] characters = {"title", "info", "picture"};
+                for (int j = 0; j < 3; j++) {
+                    if (temp.isNull(characters[j])) {
+                        itemInfo[j] = "Информация отсутствует.";
+                    } else {
+                        itemInfo[j] = (String)temp.get(characters[j]);
+                    }
+                    Log.d("my_logs", itemInfo[j]);
+                }
+                addItem(createDummyItem(i, itemInfo[0], itemInfo[1], itemInfo[2]));
             }
 
         } catch (IOException | JSONException e) {

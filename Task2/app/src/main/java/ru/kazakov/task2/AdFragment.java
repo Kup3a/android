@@ -365,21 +365,23 @@ public class AdFragment extends Fragment {
 
         @Override
         protected void onPostExecute(Bitmap bitmap) {
-            Bitmap bm = getBitmapFromMemCache(_name);
-            if (bm == null) {
-                switch (_weakIv.get().getId()) {
-                    case R.id.item_img:
-                        addBitmapToMemoryCache(_name, bitmap);
-                        break;
-                    case R.id.ivPage:
-                        addBitmapToMemoryCache(_name.concat("big"), bitmap);
-                        break;
-                    default:
-                        break;
+            //if (_weakIv.get() != null) {
+                Bitmap bm = getBitmapFromMemCache(_name);
+                if (bm == null) {
+                    switch (_weakIv.get().getId()) {
+                        case R.id.item_img:
+                            addBitmapToMemoryCache(_name, bitmap);
+                            break;
+                        case R.id.ivPage:
+                            addBitmapToMemoryCache(_name.concat("big"), bitmap);
+                            break;
+                        default:
+                            break;
+                    }
+                    addBitmapToMemoryCache(_name, bitmap);
                 }
-                addBitmapToMemoryCache(_name, bitmap);
-            }
-            _weakIv.get().setImageBitmap(bitmap);
+                _weakIv.get().setImageBitmap(bitmap);
+            //}
         }
     }
 }
