@@ -19,7 +19,10 @@ public class MainActivity extends AppCompatActivity implements AdFragment.OnList
         Fragment fragment = new AdFragment();
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.content_frame, fragment);
-        ft.addToBackStack(null);
+        // это первое заполнение активити (которая служит лишь для хранения фрагментов)
+        // поэтому при нажатии кнопки назад появляется сначала пустая активити и только при повторном нажатии назад выходим из приложения
+        // чтобы этого не было, просто не добавляем в стек этот фрагмент. тогда мы выйдем при первом же нажатии на назад
+        // ft.addToBackStack(null);
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         ft.commit();
 

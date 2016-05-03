@@ -40,6 +40,8 @@ public class DummyContent {
                 outputStream.write(data, 0, read);
             }
 
+            is.close();
+
             outputStream.flush();
             String information = outputStream.toString();
             JSONObject jsonObject = new JSONObject(information);
