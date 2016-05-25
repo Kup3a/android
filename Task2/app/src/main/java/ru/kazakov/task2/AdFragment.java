@@ -159,11 +159,12 @@ public class AdFragment extends Fragment {
 
     /**
      * Добавляет в кеш bitmap по ключу key
-     * @param key ключ, по которому добавится bitmap
+     *
+     * @param key    ключ, по которому добавится bitmap
      * @param bitmap это положится в кеш
      */
     public static void addBitmapToMemoryCache(String key, Bitmap bitmap) {
-        if (getBitmapFromMemCache(key) == null) {
+        if (getBitmapFromMemCache(key) == null && key != null && bitmap != null) {
             mMemoryCache.put(key, bitmap);
             Log.d("my_logs", "add");
         }
@@ -171,8 +172,9 @@ public class AdFragment extends Fragment {
 
     /**
      * Получает bitmap из кеша по ключу key.
+     *
      * @param key ключ, по которому достаем bitmap
-     * @return запрашиваем bitmap, если есть ключ, NULL - иначе
+     * @return запрашиваемый bitmap, если есть ключ. Иначе - NULL
      */
     public static Bitmap getBitmapFromMemCache(String key) {
         Log.d("my_logs", "get");
@@ -181,10 +183,11 @@ public class AdFragment extends Fragment {
 
     /**
      * Результат работы этого метода - отображение в iv картинки с именем name
+     *
      * @param name имя файла, который нужно загрузить из интернета, диска или кеша
-     * @param iv ссылка на ту вьюшку, куда скачанное изображение надо поместить
+     * @param iv   ссылка на ту вьюшку, куда скачанное изображение надо поместить
      */
-    public static void loadBitmap (String name, ImageView iv, Context context, int size) {
+    public static void loadBitmap(String name, ImageView iv, Context context, int size) {
         final Bitmap bm;
         switch (iv.getId()) {
             case R.id.item_img:
@@ -234,11 +237,11 @@ public class AdFragment extends Fragment {
 
     }
 
-    private static LoadImageTask getTaskFromIV(ImageView imageView){
+    private static LoadImageTask getTaskFromIV(ImageView imageView) {
         if (imageView != null) {
             Drawable d = imageView.getDrawable();
             if (d instanceof DownloadDrawable) {
-                DownloadDrawable dd = (DownloadDrawable)d;
+                DownloadDrawable dd = (DownloadDrawable) d;
                 return dd.getTask();
             }
         }
@@ -249,8 +252,9 @@ public class AdFragment extends Fragment {
     /**
      * Подсчёт, в какое количество раз нужно уменьшить размеры файла, чтобы он стал минимальным, но
      * не меньшим req-размеров.
-     * @param options опции BitmapFactory
-     * @param reqWidth требуемая ширина
+     *
+     * @param options   опции BitmapFactory
+     * @param reqWidth  требуемая ширина
      * @param reqHeight требуемая высота
      * @return непосредственно inSampleSize
      */
@@ -292,26 +296,28 @@ public class AdFragment extends Fragment {
 
         /**
          * Копирует информацию из is в os.
+         *
          * @param is поток, из которого копируем информацию
          * @param os поток, в который копируем
          */
         public void CopyStream(InputStream is, OutputStream os) {
-            final int buffer_size=1024;
+            final int buffer_size = 1024;
             try {
-                byte[] bytes=new byte[buffer_size];
-                for(;;) {
-                    int count=is.read(bytes, 0, buffer_size);
-                    if(count==-1)
+                byte[] bytes = new byte[buffer_size];
+                for (; ; ) {
+                    int count = is.read(bytes, 0, buffer_size);
+                    if (count == -1)
                         break;
                     os.write(bytes, 0, count);
                 }
+            } catch (Exception ex) {
             }
-            catch(Exception ex){}
         }
 
 
         /**
          * Получение bitmap с размерами size*size из файла file
+         *
          * @param file откуда нужно грузить изображение
          * @param size какого размера нужно грузить изображение
          * @return bitmap
@@ -347,7 +353,7 @@ public class AdFragment extends Fragment {
                     //InputStream is = context.getAssets().open(_name);
                     file = new File(context.getCacheDir(), _name.replace("/", ""));
                     bitmap = decodeFile(file, 64, _name);
-                    if (null == bitmap ) {
+                    if (null == bitmap) {
                         URL url = new URL("http://mobevo.ext.terrhq.ru/" + _name);
                         InputStream is = url.openConnection().getInputStream();
                         OutputStream os = new FileOutputStream(file);
@@ -365,21 +371,20 @@ public class AdFragment extends Fragment {
 
         @Override
         protected void onPostExecute(Bitmap bitmap) {
+            if (isCancelled())
+                bitmap = null;
+
             Bitmap bm = getBitmapFromMemCache(_name);
-            if (bm == null) {
-                switch (_weakIv.get().getId()) {
-                    case R.id.item_img:
-                        addBitmapToMemoryCache(_name, bitmap);
-                        break;
-                    case R.id.ivPage:
-                        addBitmapToMemoryCache(_name.concat("big"), bitmap);
-                        break;
-                    default:
-                        break;
-                }
+            if (bm == null && bitmap != null) {
                 addBitmapToMemoryCache(_name, bitmap);
+                bm = bitmap;
             }
-            _weakIv.get().setImageBitmap(bitmap);
+            ImageView iv = _weakIv.get();
+            if (iv != null && this == getTaskFromIV(iv)) {
+
+                iv.setImageBitmap(bm);
+
+            }
         }
     }
 }

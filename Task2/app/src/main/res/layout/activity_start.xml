@@ -10,6 +10,7 @@
     tools:context="ru.kazakov.task2.StartActivity">
 
     <TextView
+        android:id="@+id/helloTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/hello"
