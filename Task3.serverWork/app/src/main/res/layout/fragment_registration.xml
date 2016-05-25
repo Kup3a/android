@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="ru.kazakov.task3serverwork.RegistrationFragment">
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_login"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/et_login"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/tv_password"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_nick"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/et_nick"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/tv_nick"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_password"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/but_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/but_reg" />
+
+    <TextView
+        android:id="@+id/tv_reg_result"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text=""/>
+</LinearLayout>
+
+

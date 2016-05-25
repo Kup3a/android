@@ -1,0 +1,36 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="ru.kazakov.task3serverwork.UserInfoFragment">
+
+    <ImageView
+        android:id="@+id/iv_ava"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/avatar"
+        android:contentDescription="@string/ava_descr"/>
+
+    <TextView
+        android:id="@+id/tv_info_nick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textSize="32sp"
+        android:gravity="center"
+        android:text="test"
+       />
+
+    <TextView
+        android:id="@+id/tv_info_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textSize="32sp"
+        android:gravity="center"
+        android:text="test"
+        />
+
+</LinearLayout>

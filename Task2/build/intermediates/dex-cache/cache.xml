@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="D:\android\android-master\android\Task2\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1_70da17d72120030f4d79b1324e17e931514a7fda.jar" />
+    </item>
+    <item
+        jar="D:\android\android-master\android\Task2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="D:\android\android-master\android\Task2\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.1.1_068f757f519e1568d7e3f5ae7a3a58b06a2ce2e4.jar" />
+    </item>
+    <item
+        jar="D:\android\android-master\android\Task2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="D:\android\android-master\android\Task2\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.1.1_9096e2f45f1fc1ca82727cc8896533b3604cdc9a.jar" />
+    </item>
+    <item
+        jar="D:\android\android-master\android\Task2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="D:\android\android-master\android\Task2\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.1.1_d936bc670765806f9b8724ad51bf00769f5c15ad.jar" />
+    </item>
+    <item
+        jar="D:\android\android-master\android\Task2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="D:\android\android-master\android\Task2\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1_e51cebfeeb1a3d698583ee8cb08f89bf34fac729.jar" />
+    </item>
+
+</items>

@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Chatter</string>
+
+    <!-- my_menu -->
+    <string name="add_channel">Add new channel</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- SplashFragment -->
+    <string name="hello_blank_fragment">Welcome to Chatter</string>
+
+    <!-- SettingsFragment -->
+    <string name="settings">Куча настроек</string>
+    <string name="tv_status">status:</string>
+    <string name="et_status">Your current status</string>
+    <string name="bt_change_status">set new status</string>
+
+    <!-- AddingFragment -->
+    <string name="bt_add">Add chat</string>
+    <string name="tv_chat_name">Chat\'s name</string>
+    <string name="tv_chat_descr">Chat\'s description</string>
+    <string name="et_chat_name">Your chat name</string>
+    <string name="et_chat_descr">Your chat description</string>
+
+    <!-- RegistrationFragment -->
+    <string name="tv_login">login:</string>
+    <string name="tv_password">password:</string>
+    <string name="tv_nick">nick:</string>
+    <string name="but_reg">Registration</string>
+
+    <!-- MessageFragment -->
+    <string name="ev_message">Your message</string>
+    <string name="bt_send">Send</string>
+
+    <!-- UserInfoFragment -->
+    <string name="ava_descr">User avatar</string>
+
+    <!-- action bar titles -->
+    <string name="registration">Registration</string>
+    <string name="channels">Channels</string>
+    <string name="chat">Chat</string>
+    <string name="user_info">User info</string>
+    <string name="add">Add channel</string>
+    <string name="sets">Settings</string>
+
+
+</resources>
