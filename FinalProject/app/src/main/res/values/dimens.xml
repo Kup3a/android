@@ -1,0 +1,20 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- My text sizes -->
+    <dimen name="onboarding_text_size">24sp</dimen>
+
+    <!-- onboarding_circles -->
+    <dimen name="circle_size">30dp</dimen>
+    <dimen name="circle_margin">20dp</dimen>
+
+    <!-- advert_info text sizes -->
+    <dimen name="ad_i_name_size">30sp</dimen>
+    <dimen name="ad_i_field_size">18sp</dimen>
+    <dimen name="ad_i_field_value_size">22sp</dimen>
+
+
+
+</resources>

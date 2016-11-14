@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/la_1"
+    android:background="@color/on_1_back">
+
+    <TextView
+        android:text="@string/on_1_top_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/onboarding_text_size"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textViewTop" />
+
+    <TextView
+        android:text="@string/on_1_mid_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/onboarding_text_size"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/textViewTop"
+        android:id="@+id/textViewMid" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/onboarding_1_im"
+        android:id="@+id/imageView2"
+        android:contentDescription="@string/on_1_im_descr"
+        android:layout_below="@+id/textViewMid"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:id="@+id/la_1_inner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/imageView2">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/circle_size"
+            android:id="@+id/radioButtonL"
+            android:layout_marginRight="@dimen/circle_margin"
+            android:layout_marginEnd="@dimen/circle_margin"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/circle_size"
+            android:id="@+id/radioButtonM"
+            android:layout_marginRight="@dimen/circle_margin"
+            android:layout_marginEnd="@dimen/circle_margin" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/circle_size"
+            android:id="@+id/radioButtonR" />
+
+    </LinearLayout>
+
+</RelativeLayout>
