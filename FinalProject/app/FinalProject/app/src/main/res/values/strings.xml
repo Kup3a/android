@@ -1,0 +1,128 @@
+<resources>
+    <string name="app_name">FinalProject</string>
+
+    <!-- left menu -->
+    <string-array name="titles_for_menu">
+        <item>Объявления</item>
+        <item>Подробный поиск</item>
+        <item>Мои сделки</item>
+        <item>Настройки</item>
+    </string-array>
+
+    <!-- top menu -->
+    <string name="search_string">Поиск</string>
+    <string name="back_string">К списку</string>
+    <string name="open_drawer">Open drawer</string>
+    <string name="close_drawer">Close drawer</string>
+
+    <!-- onboarding_1 -->
+    <string name="on_1_top_text">Ищешь выгоду?</string>
+    <string name="on_1_mid_text">Бери в аренду!</string>
+    <string name="on_1_im_descr">Скриншот интерфейса</string>
+
+    <!-- onboarding_2 -->
+    <string name="on_2_top_text">Хочешь заработать?</string>
+    <string name="on_2_mid_text">Давай в аренду!</string>
+    <string name="on_2_im_descr">Скриншот интерфейса</string>
+
+    <!-- onboarding_3_im -->
+    <string name="on_3_top_text">Все заботы берём на себя!</string>
+    <string name="on_3_im_descr">Скриншот интерфейса</string>
+    <string name="title_activity_main_list">MainListActivity</string>
+
+    <!-- main_list -->
+    <string name="name_placeholder">Advert name</string>
+    <string name="price_placeholder">Advert price</string>
+    <string name="place_placeholder">Advert place</string>
+    <string name="advert_item_im_descr">Advert image</string>
+
+    <!-- advert_info -->
+    <string name="price">Цена:</string>э
+    <string name="deposit">Залог:</string>
+    <string name="time">Время аренды:</string>
+    <string name="place">Место аренды:</string>
+    <string name="deposit_placeholder">Advert deposit</string>
+    <string name="time_placeholder">Advert time</string>
+    <string name="user_name">User Name</string>
+    <string name="user_tel">8(985)1234567</string>
+    <string name="user_vk">vk.com/id123456</string>
+    <string name="description">Описание:</string>
+    <string name="descr_placeholder">Advert descrAdvert descrAdvert descrAdvert descrAdvert descrAdvert descrAdvert descrAdvert descrAdvert descrAdvert descr</string>
+    <string name="make_deal_but_text">Оформить сделку</string>
+
+    <!-- registraton -->
+    <string name="delimeter">---------- или ----------</string>
+    <string name="reg_name">Имя:</string>
+    <string name="reg_sirname">Фамилия:</string>
+    <string name="reg_email">email:</string>
+    <string name="reg_tel">Телефон:</string>
+    <string name="reg_pass">Пароль:</string>
+    <string name="reg_but">Далее</string>
+    <string name="reg_terms">Создавая аккаунт ShareGoods, Вы принимаете  условия пользовательского соглашения и политики конфиденциальности.</string>
+    <string name="reg_go_to_enter">Уже есть аккаунт? Вход.</string>
+
+    <!-- make_advert -->
+    <string name="m_title">Информация:</string>
+    <string name="m_name">Название:</string>
+    <string name="m_profile_info">Информация о Вас будет взята из профиля.</string>
+    <string name="m_for">За:</string>
+    <string name="m_categ">Категория:</string>
+    <string name="m_cat_placeh">Категория объявления</string>
+    <string name="m_ex_cat">Доп. кат.:</string>
+    <string name="m_ex_cat_placeh">Доп кат об</string>
+
+    <!-- profile -->
+    <string name="pr_user_place">User place</string>
+    <string name="pr_suc_deals">Сделок:</string>
+    <string name="pr_rating">Рейтинг:</string>
+    <string name="pr_answers">Отзывы о пользователе:</string>
+    <string name="pr_b_from_arend">от арендаторов</string>
+    <string name="pr_b_from_zaem">от заёмщиков</string>
+
+    <!-- card_binding -->
+    <string name="c_number">Номер Вашей карты:</string>
+    <string name="c_mm">ММ:</string>
+    <string name="c_yy">ГГ:</string>
+    <string name="c_cvv">CVV:</string>
+    <string name="c_but">Регистрация</string>
+
+    <!-- search -->
+    <string name="s_name">Что ищем:</string>
+    <string name="s_price">Цена:</string>
+    <string name="s_for">за</string>
+    <string name="s_place">Где ищем:</string>
+    <string name="s_cat">Категория:</string>
+    <string name="s_ex_cat">Доп. кат.:</string>
+    <string name="s_sort">Сортировать по:</string>
+    <string name="s_but">Искать!</string>
+
+    <!-- setings_fragment -->
+    <string name="get_cash">Получать плату за сделки на карту</string>
+    <string name="pay">Оплачивать сделки с карты</string>
+    <string name="auto_info">Автоматически подставлять информацию из профиля в информацию о Вас при создании объявления</string>
+    <string name="contacts">Ваши контактные данны видны:</string>
+    <string name="everybody">всем</string>
+    <string name="dealed">только людям, с которыми Вы подтвердили сделку</string>
+    <string name="set_button">Подтвердить</string>
+
+
+    <!-- mydeals_fragment -->
+    <string name="but_all">Все</string>
+    <string name="but_give">Давал</string>
+    <string name="but_take">Брал</string>
+
+    <!-- title names -->
+    <string name="AdvertListFragment">Объявления</string>
+    <string name="SearchFragment">Поиск</string>
+    <string name="MyDealsFragment">Ваши сделки</string>
+    <string name="SettingsFragment">Настройки</string>
+    <string name="UserProfileFragment">Профиль</string>
+    <string name="AdvertItemFragment">Объявление</string>
+    <string name="RegistrationFragment">Регистрация</string>
+    <string name="CardFragment">Привязка карты</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
